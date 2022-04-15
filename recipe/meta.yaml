@@ -1,0 +1,39 @@
+{% set version = "1.8.0" %}
+package:
+  name: devil
+  version: {{ version }}
+
+source:
+  fn: DevIL-{{ version }}.tar.xz
+  url: http://downloads.sourceforge.net/openil/DevIL-{{ version }}.tar.gz
+  sha256: 0075973ee7dd89f0507873e2580ac78336452d29d34a07134b208f44e2feb709
+  patches:
+    - patches/fix-jpeg-boolean-usage.patch
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - cmake
+    - patch
+    - ninja
+  host:
+    - libpng
+    - jpeg
+    - zlib
+    - libtiff
+    - libmng
+    - jasper
+    - lcms2    
+
+about:
+  home: http://openil.sourceforge.net/
+  license: LGPL
+  license_family: GPL
+  license_file: LICENSE
+  summary: 'A full featured cross-platform image library.'
+  doc_url: http://openil.sourceforge.net/docs/index.php
+  dev_url: https://sourceforge.net/projects/openil/
+
+extra:
+  recipe-maintainers:
+    - katietz
