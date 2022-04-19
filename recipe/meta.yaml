@@ -14,7 +14,8 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake
-    - patch
+    - m2-patch # [win]
+    - patch # [not win]
     - ninja
   host:
     - libpng
