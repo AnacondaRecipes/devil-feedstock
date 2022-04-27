@@ -11,8 +11,9 @@ source:
     - patches/fix-jpeg-boolean-usage.patch
 
 build:
-  ignore_run_exports:
+  number: 0
   skip: true # [win32]
+  ignore_run_exports:
     - zlib
 requirements:
   build:
