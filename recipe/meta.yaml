@@ -10,6 +10,9 @@ source:
   patches:
     - patches/fix-jpeg-boolean-usage.patch
 
+build:
+  ignore_run_exports:
+    - zlib
 requirements:
   build:
     - {{ compiler('cxx') }}
@@ -22,9 +25,16 @@ requirements:
     - jpeg
     - zlib
     - libtiff
-    - libmng
     - jasper
-    - lcms2    
+    - lcms2
+
+  run:
+    - libpng
+    - jpeg
+    - zlib
+    - libtiff
+    - jasper
+    - lcms2
 
 about:
   home: http://openil.sourceforge.net/
