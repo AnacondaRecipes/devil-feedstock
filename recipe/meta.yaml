@@ -43,8 +43,8 @@ requirements:
 
 about:
   home: http://openil.sourceforge.net/
-  license: LGPL
-  license_family: GPL
+  license: LGPL-2.1-or-later
+  license_family: LGPL
   license_file: LICENSE
   summary: 'A full featured cross-platform image library.'
   doc_url: http://openil.sourceforge.net/docs/index.php
