@@ -4,9 +4,12 @@ package:
   version: {{ version }}
 
 source:
-  fn: DevIL-{{ version }}.tar.xz
-  url: http://downloads.sourceforge.net/openil/DevIL-{{ version }}.tar.gz
-  sha256: 0075973ee7dd89f0507873e2580ac78336452d29d34a07134b208f44e2feb709
+  fn: DevIL-{{ version }}.tar.gz
+  # https for the sourceforge link times-out intermittently:
+  # url: https://downloads.sourceforge.net/openil/DevIL-{{ version }}.tar.gz
+  # sha256: 0075973ee7dd89f0507873e2580ac78336452d29d34a07134b208f44e2feb709
+  url: https://github.com/DentonW/DevIL/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 52129f247b26fcb5554643c9e6bbee75c4b9717735fdbf3c6ebff08cee38ad37
   patches:
     - patches/fix-jpeg-boolean-usage.patch
 
@@ -45,7 +48,7 @@ about:
   license_file: LICENSE
   summary: 'A full featured cross-platform image library.'
   doc_url: http://openil.sourceforge.net/docs/index.php
-  dev_url: https://sourceforge.net/projects/openil/
+  dev_url: https://github.com/DentonW/DevIL
 
 extra:
   recipe-maintainers:
