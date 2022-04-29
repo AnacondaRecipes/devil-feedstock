@@ -11,7 +11,8 @@ source:
   url: https://github.com/DentonW/DevIL/archive/refs/tags/v{{ version }}.tar.gz
   sha256: 52129f247b26fcb5554643c9e6bbee75c4b9717735fdbf3c6ebff08cee38ad37
   patches:
-    - patches/fix-jpeg-boolean-usage.patch
+    - patches/fix-jpeg-boolean-usage.patch # [not win]
+    - patches/fix-jpeg-boolean-usage-win.patch # [win]
 
 build:
   number: 0
