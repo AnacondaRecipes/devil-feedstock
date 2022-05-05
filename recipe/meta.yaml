@@ -18,6 +18,7 @@ build:
   skip: true # [win32 or s390x]
   ignore_run_exports:
     - zlib
+    - jpeg # [win]
 requirements:
   build:
     - {{ compiler('cxx') }}
