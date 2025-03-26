@@ -28,7 +28,9 @@ requirements:
     - jpeg {{ jpeg }}
     - zlib {{ zlib }}
     - libtiff 4.7.0
-    - jasper 4.2.4
+    # jasper 4+ isn't compatible:
+    # $SRC_DIR/DevIL/src-IL/src/il_jp2.cpp:354:9: error: invalid conversion from 'int (*)(jas_stream_obj_t*, char*, int)'
+    - jasper 2.0.14
     - lcms2 2.16
 
   run:
