@@ -19,7 +19,7 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake
-    - m2-patch  # [win]
+    - msys2-patch  # [win]
     - patch     # [not win]
     - ninja
   host:
